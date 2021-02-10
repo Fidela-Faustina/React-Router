@@ -1,0 +1,344 @@
+:root {
+  --white: #ffff;
+  --pastelgreen : #c5f336;
+  --primary-dark : #343a40;
+  --primary-grey: rgba(109, 109, 109);
+  --primary-light-grey : rgba(172, 172, 172);
+  --pastelblue : #4dcdc2;
+  --pastelred : #fe6a6a;
+  --pastelorange : #ffb633;
+  --gradient1 : linear-gradient(to right, #c5f336, #ffb633);
+}
+body {
+  font-family: sans-serif;
+}
+
+/****************************** NAVBAR ************************************/
+nav {
+  z-index: 2;
+}
+.logo {
+  width: 8rem;
+  margin: 1.2rem;
+}
+
+/****************************** NAV LINK ************************************/
+nav a.nav-link {
+  font-weight: 300;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--white) !important;
+  border-top: 0.17rem solid var(--primary-dark);
+}
+
+.navbar-brand {
+  max-width: 10rem;
+  padding: 0 !important;
+  height: 6rem !important;
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus {
+  border-top: 0.17rem solid var(--pastelgreen);
+}
+
+.navbar-nav > li > a:hover {
+  border-top: 0.17rem solid var(--pastelgreen);
+}
+
+/****************************** HEADER ************************************/
+.header-wraper {
+  position: relative;
+  background: url(images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.header-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-info h1{
+  color: var(--pastelgreen);
+  text-transform: uppercase;
+}
+
+
+/****************************** TYPED TEXT ************************************/
+.header-typed-text {
+  font-size: 2rem;
+  color: var(--pastelblue);
+}
+
+@media(max-width: 768px){
+  .header-info h1{
+    font-size: 1.5rem !important;
+  }
+  .header-typed-text {
+    font-size: 1.7rem !important;
+  }
+}
+
+/****************************** BUTTON UTAMA ************************************/
+.header-btn {
+  border: 1px solid var(--pastelorange);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 20px;
+  color: var(--white);
+  margin: 2rem;
+  z-index: 2;
+  font-family: "montserrat";
+  overflow: hidden;
+  transition: 1s all ease;
+}
+
+.header-btn:hover{
+  text-decoration: none;
+  background-color: var(--pastelgreen);
+  color: var(--pastelred);
+  font-weight: 600;
+  transition: .2s;
+}
+
+/****************************** PARTICLES ************************************/
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/****************************** TENTANG SAYA ************************************/
+.about-container{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.about{
+  background: url(images/bg-profile.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.inner-section{
+  width: 55%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 140px;
+  box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
+}
+
+.inner-section h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text{
+    font-size: 15px;
+    color: var(--primary-dark);
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.social-container{
+  text-align: center;
+}
+
+a.social{
+  margin: 0 1rem;
+  transition: transform 250.ms;
+  display: inline-block;
+  color: var(--pastelgreen);
+}
+
+a.social:hover{
+  transform: translateY(-2px);
+  color: var(--pastelorange);
+}
+
+@media screen and (max-width:1200px){
+    .inner-section{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        padding: 0;
+    }
+    .inner-section{
+        padding: 60px;
+    }
+    .skills button{
+        font-size: 19px;
+        padding: 5px;
+        width: 160px;
+    }
+}
+
+/****************************** FOOTER ************************************/
+.footer-container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: var(--primary-dark);
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.icon{
+  margin: 0 1rem;
+  margin-top: 0rem;
+  transition: transform 250.ms;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: var(--pastelblue);
+  line-height: 37px ;
+}
+
+.icon:hover{
+  transform: translateY(-2px);
+  background-color: var(--pastelred);
+}
+
+.copyright{
+  color: white;
+  margin-bottom: 0rem;
+}
+
+.menu{
+  margin: 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--pastelgreen);
+  text-transform: uppercase;
+}
+
+.menu:hover{
+  color:var(--pastelorange);
+  text-decoration: none;
+}
+
+
+/****************************** KONTAK ************************************/
+.title{
+  text-align: center;
+  margin-top: 4rem;
+  color:var(--primary-dark);
+  text-transform: uppercase;
+}
+.kontak-wraped{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.kontak-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; 
+}
+
+.kontak-card{
+  background: var(--primary-dark);
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-info{
+  font-size: 5px;
+  background: var(--pastelred);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.kontak-card:hover .card-info{
+  background: none;
+  transform: scale(1.6);
+}
+
+.kontak-card p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.kontak-card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .kontak-info{
+    flex-direction: column;
+  }
+  .kontak-card{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}  
+
