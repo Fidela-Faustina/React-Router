@@ -3,11 +3,10 @@
   --pastelgreen : #c5f336;
   --primary-dark : #343a40;
   --primary-grey: rgba(109, 109, 109);
-  --primary-light-grey : rgba(172, 172, 172);
+  --primary-light-grey : rgba(219, 213, 213, 0.829);
   --pastelblue : #4dcdc2;
   --pastelred : #fe6a6a;
   --pastelorange : #ffb633;
-  --gradient1 : linear-gradient(to right, #c5f336, #ffb633);
 }
 body {
   font-family: sans-serif;
@@ -137,12 +136,11 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
 }
 
 .about{
-  background: url(images/bg-profile.jpg) no-repeat left;
-  background-size: 55%;
+  background: url(images/profile.jpeg) no-repeat left;
+  background-size: 49%;
   background-color: #fdfdfd;
   overflow: hidden;
   padding: 100px 0;
@@ -215,51 +213,87 @@ a.social:hover{
     }
 }
 
-/****************************** FOOTER ************************************/
-.footer-container {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  background: var(--primary-dark);
-  padding: 20px 0px;
+/****************************** KARYA ************************************/
+.karya-title{
   text-align: center;
-}
-
-.icon{
-  margin: 0 1rem;
-  margin-top: 0rem;
-  transition: transform 250.ms;
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  border-radius: 100%;
-  background-color: var(--pastelblue);
-  line-height: 37px ;
-}
-
-.icon:hover{
-  transform: translateY(-2px);
-  background-color: var(--pastelred);
-}
-
-.copyright{
-  color: white;
-  margin-bottom: 0rem;
-}
-
-.menu{
-  margin: 0 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  color: var(--pastelgreen);
   text-transform: uppercase;
 }
 
-.menu:hover{
-  color:var(--pastelorange);
-  text-decoration: none;
+.karya-title h1{
+  color: var(--primary-dark);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
+.karya-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.blog-poster{
+  width: min(1200px, 100%);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.poster{
+  width: calc(33% - 10px);
+  overflow: hidden;
+}
+
+.poster img{
+  width: 100%;
+  border-radius: 6px;
+  transition: .3s linear;
+}
+
+.poster-caption{
+  background-color: var(--primary-light-grey);
+  margin: 0 20px;
+  padding: 0px;
+  border-radius: 6px;
+  transform: translateY(-20px);
+  transition: .3s linear;
+  text-align: center;
+  text-transform: initial;
+}
+
+.poster-caption h3{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.date{
+  font-size: 15px;
+  font-style: italic;
+  color: var(--pastelred);
+}
+
+.poster:hover .poster-img{
+  transform: translateY(20px);
+}
+
+.poster:hover .poster-caption{
+  transform: translateY(-80px);
+}
+
+@media screen and (max-width: 1200px){
+  .karya-container{
+    height: 280vh;
+  }
+  .blog-poster{
+    justify-content: center;
+  }
+  .poster{
+    width: min(300px, 70%);
+  }
+}
 
 /****************************** KONTAK ************************************/
 .title{
@@ -296,7 +330,7 @@ a.social:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -342,3 +376,47 @@ a.social:hover{
   }
 }  
 
+/****************************** FOOTER ************************************/
+.footer-container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: var(--primary-dark);
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.icon{
+  margin: 0 1rem;
+  margin-top: 0rem;
+  transition: transform 250.ms;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: var(--pastelblue);
+  line-height: 37px ;
+}
+
+.icon:hover{
+  transform: translateY(-2px);
+  background-color: var(--pastelred);
+}
+
+.copyright{
+  color: white;
+  margin-bottom: 0rem;
+}
+
+.menu{
+  margin: 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--pastelgreen);
+  text-transform: uppercase;
+}
+
+.menu:hover{
+  color:var(--pastelorange);
+  text-decoration: none;
+}
