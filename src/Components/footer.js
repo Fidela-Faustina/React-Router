@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
+import { AiOutlineGithub } from "react-icons/ai";
 import {Link} from "react-router-dom";
 
 class Footer extends React.Component {
@@ -9,14 +10,17 @@ class Footer extends React.Component {
         return(
         <div className="footer-container">
             <div className="footer-icon">
-                <a href="https://www.instagram.com/" className="icon">
+                <a href="https://www.instagram.com/fidelafaizza/" className="icon">
                         <AiFillInstagram color="white" size="2rem" />
                  </a>
-                 <a href="https://id-id.facebook.com/" className="icon">
+                 <a href="https://web.facebook.com/fidela.faustina.52" className="icon">
                         <IoLogoFacebook color="white" size="2rem"/>
                  </a>
                  <a href="https://twitter.com/twitter"  className="icon">
                         <FaTwitter color="white" size="2rem"/>
+                 </a>
+                 <a href="https://github.com/Fidela-Faustina"  className="icon">
+                        <AiOutlineGithub color="white" size="2rem"/>
                  </a>
             </div>
             <div className="menu">
