@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
+import { AiOutlineGithub } from "react-icons/ai";
 
 class TentangSaya extends React.Component {
     render(){
@@ -18,14 +19,17 @@ class TentangSaya extends React.Component {
                 kalian bisa hubungi akun sosmed saya di bawah ini, salam kenal :)
                 </p>
             <div className="social-container">
-                 <a href="https://www.instagram.com/" className="instagram social">
+                 <a href="https://www.instagram.com/fidelafaizza/" className="instagram social">
                         <AiFillInstagram  size="2.5rem" />
                  </a>
-                 <a href="https://id-id.facebook.com/" className="facebook social">
+                 <a href="https://web.facebook.com/fidela.faustina.52" className="facebook social">
                         <IoLogoFacebook  size="2.5rem"/>
                  </a>
                  <a href="https://twitter.com/twitter" className="twitter social">
                         <FaTwitter  size="2.5rem"/>
+                 </a>
+                 <a href="https://github.com/Fidela-Faustina" className="twitter social">
+                        <AiOutlineGithub  size="2.5rem"/>
                  </a>
             </div>
             </div>
