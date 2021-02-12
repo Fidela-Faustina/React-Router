@@ -11,7 +11,7 @@ class Header extends React.Component {
             <h1>Selamat Datang di Website ini</h1>
             <Typed
                 className="header-typed-text"
-                strings={["Assalamu'alaikum wr. wb","Ini Bagian Beranda"]}
+                strings={["Assalamu'alaikum wr. wb","Kalian Berada di Beranda"]}
                 typeSpeed={40}
                 backSpeed={60}
                 loop
