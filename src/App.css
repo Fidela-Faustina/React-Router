@@ -7,9 +7,30 @@
   --pastelblue : #4dcdc2;
   --pastelred : #fe6a6a;
   --pastelorange : #ffb633;
+  --gradient1 : (to right, #c5f336, #ffb633);
 }
 body {
   font-family: sans-serif;
+}
+
+/****************************** SCROLLBAR ************************************/
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #343a40;;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(
+    10deg,
+    #ffb633,
+    #c5f336,
+    #4dcdc2
+  );
+  border-radius: 1px;
 }
 
 /****************************** NAVBAR ************************************/
@@ -336,7 +357,7 @@ a.social:hover{
 
 .card-info{
   font-size: 5px;
-  background: var(--pastelred);
+  background: var(--pastelorange);
   width: 60px;
   height: 60px;
   text-align: center;
